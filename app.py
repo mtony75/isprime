@@ -35,6 +35,32 @@ def isPrime(number):
 
     return isPrime
 
+def getRange():
+    # function to get two integers from user that will find all the 
+    # prime numbers in said range
+    print("Give me a range of numbers and find out which numbers in the")
+    print("range are prime numbers?")
+    firstNumber = getPrime()
+    secondNumber = getPrime()
+
+    primeList = []
+    if firstNumber < secondNumber:
+        primeList = rangeOfPrime(firstNumber, secondNumber)
+    else:
+        primeList = rangeOfPrime(secondNumber, firstNumber)
+    
+    return primeList
+
+def rangeOfPrime(num1, num2):
+    # function that iterates though the range of numbers given to
+    # find the prime numbers and return a list of said primes.
+
+    listOfPrimes = [] 
+    for element in range(num1, num2):
+        if isPrime(element):
+            listOfPrimes.append(element)
+    return listOfPrimes
+
 userNumber = getPrime()
 print(userNumber)
 
@@ -42,3 +68,6 @@ if isPrime(userNumber):
     print(f"{userNumber} is a Prime")
 else:
     print(f"{userNumber} is not a Prime")
+
+primeRange = getRange()
+print(f"The list of primes is {primeRange}")
