@@ -8,4 +8,4 @@ isprime will accept a number from the user and check if it is a prime number or 
 
 #### Update June 26, 2018
 * Added feature that will take a range of numbers and find all the prime numbers in that range.
-
+* Added feature that will accept a number from the user and find the next 100 prime numbers from that number.
