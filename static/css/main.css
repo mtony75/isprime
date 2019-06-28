@@ -1,0 +1,52 @@
+/* CSS Variables */
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+
+}
+
+body {
+    background: #ccc;
+    margin: 30px 50px;
+    line-height: 1.4;
+}
+
+.prime-app {
+    display: grid;
+    grid-column-gap: 50px;
+    
+
+}
+
+.prime-menu {
+    size: 8;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+.prime-logo {
+    color: blue;
+    text-transform: uppercase;
+    grid-row: 1/2;
+    grid-column: 1/4;
+}
+
+.prime-content {
+    grid-row: 2/3;
+    grid-column: 2/4;
+    
+}
+
+.prime-footer {
+    grid-row: 3/4;
+    grid-column: 1/4;
+}

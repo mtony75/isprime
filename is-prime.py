@@ -84,7 +84,7 @@ def nextHundredPrimes():
     return listOfPrimes
 
 
-
+'''
 userNumber = getPrime()
 print(userNumber)
 
@@ -105,3 +105,4 @@ print()
 oneHundredPrimes = nextHundredPrimes()
 # print(f"Length is {len(oneHundredPrimes)}")
 print(f"The list of next 100 primes are {oneHundredPrimes}")
+'''
