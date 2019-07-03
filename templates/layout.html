@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="static/css/main.css" >
-    <title>Document</title>
+    <title>{% if title is defined %}
+        {{ title }}
+        {% else %}
+        Is It Prime - Home
+        {% endif %}
+    </title>
 </head>
 <body>
     <div class="prime-app">
-        <div class="prime-logo">Its So Prime</div>
+        <div class="prime-logo"><a href="/">Its So Prime</a></div>
         <div class="prime-menu">
-            <p class=menuitem>Is It Prime</p>
+            <p class=menuitem><a href="/isprime">Is It Prime</a></p>
             <p class=menuitem>Range of Primes</p>
             <p class=menuitem>Next 100 Primes</p>
         </div>
         <div class="prime-content">
-            {% block Content %}
-            
-            {% endblock %}
+            {% block content %}{% endblock %}
         </div>
         <div class="prime-footer"><p>Fleming App Development &copy 2018</p></div>
     </div>

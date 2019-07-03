@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form action = "http://localhost:5000/isprime" method = post>
+    <fieldset>
+       <legend>Contact Form</legend>
+       {{ form.hidden_tag() }}
+
+       <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+        {{ form.userNumber.label }}<br>
+        {{ form.userNumber }} <br>
+        
+        <p>{{ theMessage }}</p>
+    
+        <br>
+        <br>
+            {{ form.submit }}
+        </div>
+            
+    </fieldset>
+</form>
+
+{% endblock %}
