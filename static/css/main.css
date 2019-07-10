@@ -50,9 +50,21 @@ body {
 .prime-footer {
     grid-row: 3/4;
     grid-column: 1/4;
+    justify-content: right;
 }
 
 p.content {
     color: black;
     line-height: 1.8;
+}
+
+p.copyright {
+    text-align: right;
+
+}
+
+p.warning {
+    --primarycolor: red;
+    color: var(--primarycolor);
+    font-weight: bold;
 }

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<p>Test Range Of Prime</p>
+<form action = "http://localhost:5000/rangeofprimes" method = post>
+    <fieldset>
+       <legend>Enter Two Numbers to See which in the range are Prime</legend>
+       {{ form.hidden_tag() }}
+
+       <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+        {{ form.firstNumber.label }}<br>
+        {{ form.firstNumber }} <br>
+
+        {{ form.secondNumber.label }}<br>
+        {{ form.secondNumber }}<br>
+        <br>
+        {% if primeList is defined %}
+        <p>The prime numbers in range {{ form.firstNumber.data }} and {{ form.secondNumber.data }}
+            are {% for listItems in primeList %} {{ listItems }} {% endfor %}
+        </p>
+        {% endif %}
+        
+        <p class="warning">{{ theMessage }}</p>
+    
+        <br>
+        <br>
+            {{ form.submit }}
+        </div>
+            
+    </fieldset>
+</form>
+{% endblock %}
