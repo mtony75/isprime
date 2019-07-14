@@ -15,7 +15,7 @@
         <br>
         {% if primeList is defined %}
         <p>The prime numbers in range {{ form.firstNumber.data }} and {{ form.secondNumber.data }}
-            are {% for listItems in primeList %} {{ listItems }} {% endfor %}
+            are {% for listItems in primeList %} {{ listItems }}{% if not loop.last %},{% endif %} {% endfor %}
         </p>
         {% endif %}
         

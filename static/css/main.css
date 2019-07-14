@@ -64,7 +64,7 @@ p.copyright {
 }
 
 p.warning {
-    --primarycolor: red;
+    --primarycolor: #f00;
     color: var(--primarycolor);
     font-weight: bold;
 }
