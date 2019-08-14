@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<p>Next Hundred Primes</p>
+<form action = "http://localhost:5000/nexthundred" method = post>
+    <fieldset>
+        <legend>Enter A Number to See the next 100 Prime Numbers</legend>
+        {{ form.hidden_tag() }}
+        
+        <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+            {{ form.userNumber.label }}<br>
+            {{ form.userNumber }} <br>
+            <br>
+            {% if nextHundredList is defined %}
+
+            <p>The next hundred prime numbers from {{ form.userNumber.data }} are {% for listItems in nextHundredList %} {{ listItems }} {% if not loop.last %},{% endif %} {% endfor %}
+            </p>
+            {% endif %}</p>
+
+        <p class="warning">{{ theMessage }}</p>
+    
+        <br>
+        <br>
+            
+            {{ form.submit }}
+        </div>
+        
+    </fieldset>
+</form>
+{% endblock %}

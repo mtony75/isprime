@@ -1,6 +1,6 @@
 from flask import Flask, render_template, flash, request
 from isprime import *
-from primecontrollers import IsPrime, RangeOfPrimes
+from primecontrollers import IsPrime, RangeOfPrimes, NextHundred
 
 app = Flask(__name__)
 
@@ -9,7 +9,19 @@ app = Flask(__name__)
 def index():
     return render_template('main.html')
 
-
+@app.route('/nexthundred', methods=['GET', 'POST'])
+def nexthundred():
+    form = NextHundred()
+    title = "Next Hundred"
+    nextHundredList = []
+    if form.is_submitted():
+        if form.validate():
+            
+            nextHundredList = nextHundredPrimes(form.userNumber.data)
+        return render_template('nexthundred.html', form=form, title=title, nextHundredList=nextHundredList)
+    else:
+        theMessage = "The number is not valid"
+    return render_template('nexthundred.html', form=form, theMessage=theMessage, title=title)
 
 
 @app.route('/isprime', methods=['GET', 'POST'])

@@ -9,3 +9,7 @@ class RangeOfPrimes(FlaskForm):
     firstNumber = IntegerField("Number1")
     secondNumber = IntegerField("Number2")
     submit = SubmitField("Send")
+
+class NextHundred(FlaskForm):
+    userNumber = IntegerField("Number")
+    submit = SubmitField("Send")

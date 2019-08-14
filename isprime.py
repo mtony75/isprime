@@ -61,16 +61,17 @@ def rangeOfPrime(num1, num2):
             listOfPrimes.append(element)
     return listOfPrimes
 
-def nextHundredPrimes():
+def nextHundredPrimes(number):
     # Function that will find the next 100 prime numbers from an integer
     # asked for from the user.
 
-    print("Give me a number.")
-    userNumber = getPrime()
-    if isPrime(userNumber):
-        print(f"{userNumber} is a prime number.")
-    else:
-        print(f"{userNumber} is not a prime number.")
+    #print("Give me a number.")
+    #userNumber = getPrime()
+    userNumber = number
+    #if isPrime(userNumber):
+    #    print(f"{userNumber} is a prime number.")
+    #else:
+    #    print(f"{userNumber} is not a prime number.")
 
     
     listOfPrimes = []
